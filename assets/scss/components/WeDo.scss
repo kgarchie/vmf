@@ -1,0 +1,56 @@
+.wedo {
+    width: 100%;
+    display: flex;
+
+    .container {
+        isolation: isolate;
+        padding: 4rem;
+        width: 1000px;
+        border-radius: 10px;
+        margin: auto;
+        background-color: var(--fade-blue);
+
+        .content {
+            display: flex;
+            margin: auto;
+            position: relative;
+            margin-top: 2rem;
+
+            p {
+                max-width: 450px;
+            }
+
+            .img {
+                width: 400px;
+                height: 350px;
+                border-radius: 6px;
+                overflow: hidden;
+                position: absolute;
+                right: -2rem;
+
+                img {
+                    width: 400px;
+                    height: 350px;
+                    object-fit: cover;
+                }
+
+                &.prop{
+                    outline: 2px solid #8eb5f0cc;
+                    right: 1rem;
+                    top: 2rem;
+                    width: 380px;
+                    z-index: -5;
+                }
+            }
+
+            .line {
+                position: absolute;
+                z-index: -1;
+                top: 10rem;
+                left: -10rem;
+                rotate: 45deg;
+                transform: scaleX(-1);
+            }
+        }
+    }
+}

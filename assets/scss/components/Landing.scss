@@ -1,0 +1,195 @@
+.landing {
+    width: 100%;
+    margin: auto;
+    display: flex;
+
+    .container {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+
+        .aside {
+            grid-area: aside;
+            width: 30%;
+            max-width: 300px;
+            margin-left: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .dots-container {
+                position: fixed;
+                z-index: 100;
+                height: 20vh;
+                left: 2rem;
+                top: 50%;
+                transform: translateY(-50%);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+
+                .dot {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: var(--light-blue);
+                    cursor: pointer;
+
+                    transition: all 0.5s ease;
+
+                    &:not(.active) {
+                        background-color: var(--gray);
+                        scale: 0.8;
+                    }
+                }
+            }
+
+            .items {
+                margin-top: auto;
+                margin-bottom: 5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .scroll-circle {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    background-color: var(--light-blue);
+                    display: grid;
+                    place-items: center;
+
+                    &__arrow {
+                        svg {
+                            fill: white;
+                        }
+                    }
+                }
+
+                .tag {
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    font-weight: 500;
+                    margin-top: 1.5rem;
+                }
+
+                .links {
+                    display: flex;
+                    margin-top: 8rem;
+                    gap: 1rem;
+
+                    div {
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    .instagram {
+                        scale: 0.85;
+                    }
+
+                    .x {
+                        scale: 0.7;
+                    }
+
+                    svg {
+                        fill: var(--light-blue);
+                    }
+                }
+            }
+        }
+
+        .content {
+            width: 70%;
+            margin-top: 10vh;
+            max-width: 1200px;
+            margin: auto;
+
+            .atop {
+                position: relative;
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+
+                .ribbon {
+                    position: absolute;
+                    z-index: -1;
+                    top: -100%;
+                    left: 10%;
+                }
+                
+                .blast {
+                    margin-top: 0.5rem;
+                    font-size: 3rem;
+                    font-weight: 100;
+                    color: var(--blue);
+                    line-height: 3rem;
+                }
+
+                .bubble {
+                    color: white;
+                    position: relative;
+                    width: 270px;
+                    height: fit-content;
+                    isolation: isolate;
+
+                    &__content {
+                        position: absolute;
+                        background-color: var(--blue);
+                        padding: 1.5rem;
+                        width: 270px;
+                        right: 100px;
+                        border-radius: 10px;
+
+                        .quote {
+                            font-style: italic;
+                            font-weight: 200;
+                        }
+
+                        .from {
+                            margin-top: 12px;
+                            display: flex;
+                            gap: 5px;
+                            align-items: flex-end;
+
+                            .person {
+                                font-size: 0.9rem;
+                            }
+
+                            .location {
+                                font-size: 12px;
+                                font-style: italic;
+                                color: #bbb;
+                            }
+                        }
+
+                        .spoke {
+                            position: absolute;
+                            bottom: -14%;
+                            background-color: var(--blue);
+                            width: 50px;
+                            height: 50px;
+                            clip-path: polygon(100% 0, 0 100%, 0 0);
+                            border-radius: 10px;
+                            z-index: -1;
+                        }
+                    }
+                }
+            }
+
+            .media {
+                width: 100%;
+                display: grid;
+                place-items: center;
+
+                img {
+                    margin-top: 1rem;
+                    width: 50vw;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

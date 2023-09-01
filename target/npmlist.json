@@ -1,0 +1,1 @@
+{"name":"nuxt-app","dependencies":{"@babel/runtime":{"version":"7.22.11"},"concurrently":{"version":"8.2.1"},"date-fns":{"version":"2.30.0"},"napi-wasm":{"version":"1.1.0"},"regenerator-runtime":{"version":"0.14.0"},"spawn-command":{"version":"0.0.2"},"supports-color":{"version":"8.1.1"},"tree-kill":{"version":"1.2.2"}}}

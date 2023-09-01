@@ -1,0 +1,93 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    position: fixed;
+    width: 100vw;
+    width: 100dvw;
+    z-index: 1000;
+
+    .left {
+        width: 10.2rem;
+
+        .logo {
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--blue);
+        }
+    }
+
+    .right {
+        display: flex;
+        font-weight: bold;
+        --item-left: 3rem;
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+
+            .nav-link {
+                margin-left: var(--item-left);
+            }
+        }
+
+        .search {
+            display: flex;
+            position: relative;
+            align-items: center;
+            margin-left: var(--item-left);
+
+            img{
+                position: absolute;
+                left: 5px;
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+
+            input {
+                all: unset;
+                border: 1px solid;
+                border-radius: 20px;
+                padding: 0.4rem;
+                padding-left: 2rem;
+                width: 0;
+                visibility: hidden;
+                background-color: white;
+
+                transition: width 0.5s ease;
+
+                &.active{
+                    width: 200px;
+                    visibility: visible;
+                }
+            }
+        }
+
+        .action {
+            margin-left: var(--item-left);            
+            margin-right: 1rem;
+            display: grid;
+            place-items: center;
+
+            a {
+                padding: 0.5rem 1rem;
+                background-color: var(--blue);
+                color: white;
+                border-radius: 5px;
+                cursor: pointer;
+                border: 2px solid var(--blue);
+
+                transition: all 0.25s ease;
+
+                &:hover{
+                    background-color: white;
+                    color: var(--blue);
+                }
+            }
+        }
+    }
+}

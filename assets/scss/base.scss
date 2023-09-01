@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --blue: #071B46;
+    --light-blue: #2767ef;
+    --gray: #e2e2e2;
+    --fade-blue: #EFF2F8;
+    font-family: "Inter", sans-serif, serif;
+    color: #121212;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+section.page {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: grid;
+}
+
+h1.title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #bbb;
+}

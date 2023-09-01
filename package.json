@@ -1,0 +1,19 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "yarn sass:build && nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "sass:watch": "sass --watch assets/scss/main.scss:assets/css/style.css",
+    "sass:build": "sass assets/scss/main.scss assets/css/style.css"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "nuxt": "^3.7.0",
+    "sass": "^1.66.1"
+  },
+  "dependencies": {}
+}
