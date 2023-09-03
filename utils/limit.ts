@@ -1,3 +1,5 @@
+import { ref } from 'vue'
+
 export function throttle(method: Function, delay: number, context: any): () => void {
     let inThrottle: boolean
     return function () {

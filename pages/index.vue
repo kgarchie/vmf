@@ -1,31 +1,62 @@
 <template>
-    <div class="main">
-        <Title>Home</Title>
-        <Landing />
-        <WeDo />
-        <Composition />
+    <Title>Home</Title>
+    <div ref="parent">
+        <section class="page">
+            <HomeLanding />
+        </section>
+        <section class="page">
+            <HomeWeDo />
+        </section>
+        <section class="page">
+            <HomeComposition />
+        </section>
         <section class="page">
             <div class="wrapper">
-                <Impact />
-                <Support />
+                <HomeImpact />
+                <HomeSupport />
             </div>
         </section>
         <section class="page last segmented">
-            <LoveFound />
+            <HomeLoveFound />
             <Footer />
         </section>
     </div>
 </template>
-<style scoped>
-.main {
-    overflow: hidden;
-    height: 100vh;
-}
+<script setup lang="ts">
+import { FullPage } from '~/utils/FullPage'
+let fullPage: FullPage | null = new FullPage()
+const parent = ref<HTMLElement | null>(null)
 
-.wrapper{
+onMounted(() => {
+    if (parent.value) fullPage!.init(parent.value)
+
+    const scroll_circle = document.querySelector('.scroll-circle')
+    scroll_circle?.addEventListener('click', () => {
+        fullPage!.next()
+    })
+})
+
+onUnmounted(() => {
+    fullPage!.destroy()
+    fullPage = null
+
+    const scroll_circle = document.querySelector('.scroll-circle')
+    scroll_circle?.removeEventListener('click', () => {
+        fullPage!.next()
+    })
+})
+
+nextTick(() => {
+    if (process.client && parent.value) fullPage!.reInit(parent.value)
+})
+</script>
+<style scoped>
+.wrapper {
     display: flex;
+    height: 100%;
+    max-height: 500px;
     flex-direction: column;
-    gap: 5rem;
+    justify-content: space-around;
     margin: auto;
 }
 
@@ -36,5 +67,3 @@
     margin: auto;
 }
 </style>
-<script setup lang="ts">
-</script>

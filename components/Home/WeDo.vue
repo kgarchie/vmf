@@ -1,5 +1,4 @@
 <template>
-    <section class="page">
         <div class="wedo">
             <div class="container">
                 <h1 class="title">What we do</h1>
@@ -26,5 +25,4 @@
                 </div>
             </div>
         </div>
-    </section>
 </template>

@@ -1,5 +1,4 @@
 <template>
-    <section class="page">
         <div class="composition">
             <div class="container">
                 <div class="header">
@@ -173,5 +172,4 @@
                 </div>
             </div>
         </div>
-    </section>
 </template>
